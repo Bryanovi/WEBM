@@ -1,0 +1,42 @@
+.border-white {
+  border: 1px solid white;
+}
+
+.side-nav-content {
+  color: white;
+  width: 230px;
+  margin-left: 10px;
+}
+
+.nav-list {
+  list-style: none;
+  height: 100%;
+  padding: 0%;
+  margin-bottom: 0%;
+}
+
+.nav-list-item {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.nav-list-item a i {
+  font-size: 20px;
+  height: 25px;
+  width: 25px;
+  margin: 0 15 0 10px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.nav-list-item span {
+  width: 120px;
+  text-transform: capitalize;
+  padding-left: 1em;
+}
+
+.nav-list-item a {
+  width: 100%;
+  text-align: start;
+}

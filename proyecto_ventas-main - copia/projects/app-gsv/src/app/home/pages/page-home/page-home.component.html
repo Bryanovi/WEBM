@@ -1,0 +1,13 @@
+<gsv-title></gsv-title>
+<div class="side-nav-content">
+  <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4">
+    <div class="col mb-4" *ngFor="let list of listaMenu">
+      <div class="card h-100">
+        <a [routerLink]="list.url" class="card-body text-center">
+          <i class="{{ list.icon }}"></i>
+          <h5 class="card-title">{{ list.title }}</h5>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

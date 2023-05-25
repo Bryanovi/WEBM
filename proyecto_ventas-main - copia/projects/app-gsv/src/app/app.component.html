@@ -1,0 +1,11 @@
+
+
+<!-- <div class="container-fluid g-0" *ngIf="validarUser|async as user"> -->
+  <gsv-header (sideNavToggled)="sideNavStatus =$event;"></gsv-header>
+  <main>
+    <gsv-menu class="" [sideNavStatus]="sideNavStatus" [ngClass]="{'app-side-nav-open':sideNavStatus}"></gsv-menu>
+    <div class="display-area p-3" [ngClass]="{'display-area-shrink': sideNavStatus}">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+<!-- </div> -->

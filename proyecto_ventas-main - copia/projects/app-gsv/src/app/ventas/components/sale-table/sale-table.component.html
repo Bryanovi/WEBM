@@ -1,0 +1,15 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th *ngFor="let metadata of metaDataColumns">{{ metadata.title }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of data">
+        <td *ngFor="let metadata of metaDataColumns">{{ row[metadata.field] }}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

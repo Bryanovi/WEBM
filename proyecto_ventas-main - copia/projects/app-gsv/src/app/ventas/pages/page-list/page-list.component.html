@@ -1,0 +1,32 @@
+<div class="container">
+  <gsv-title></gsv-title>
+  <!-- Se va a mostrar siempre y cuando no se haya registrado :  *ngIf="validarRegistroUser"-->
+  <div class="form">
+    <gsv-form-user 
+      [dataCliente]="registrosClientes" 
+      [dataVendedor]="registrosVendedores"
+      (formularioEnviado)="grabarUserRegister($event)" 
+      [validarGenerarVenta]="validarRegistroProduct"
+      #formUserRef>
+    </gsv-form-user>
+  </div>
+  <!-- Formulario para añadir producto -->
+  <div class="form">
+    <gsv-form [data]="registrosProducto" (formularioEnviado)="grabarFormulario($event)"
+      *ngIf="validarRegistroUser"></gsv-form>
+  </div>
+</div>
+
+<gsv-container>
+  <perfect-scrollbar>
+    <gsv-sale-table [data]=" data" [metaDataColumns]="metaDataColumns"></gsv-sale-table>
+  </perfect-scrollbar>
+
+  <gsv-paginator [length]=" totalRegistros" (onChangePage)="changePage($event)">
+  </gsv-paginator>
+
+  <button class="btn btn-primary" (click)="setVenta()" [disabled]="!validarRegistroProduct">
+    <i class="fas fa-shopping-cart"></i> Generar Venta
+  </button>
+
+</gsv-container>

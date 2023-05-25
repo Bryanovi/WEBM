@@ -1,0 +1,15 @@
+<div class="container d-flex align-items-center ">
+  <form [formGroup]="formulario" (ngSubmit)="buscar()" class="form-inline">
+    <div class="form-group">
+      <div class="input-group">
+        <input type="text" class="form-control form-control-sm" id="terminoBusqueda" formControlName="terminoBusqueda"
+          placeholder="Buscar...">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary btn-sm" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

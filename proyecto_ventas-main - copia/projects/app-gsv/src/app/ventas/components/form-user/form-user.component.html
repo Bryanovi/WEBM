@@ -1,0 +1,23 @@
+<div class="container col-md-10">
+  <div class="card custom-card">
+    <div class="card-body">
+      <!-- <h4 class="card-title">Register User</h4> -->
+      <form [formGroup]="formulario" (ngSubmit)="grabar()" class="form-container d-flex flex-row align-items-end">
+        <div class="form-group flex-grow-1 me-2">
+          <label for="cliente">Producto</label>
+          <select class="form-control" id="cliente" formControlName="cliente">
+            <option value="">Seleccionar Producto</option>
+            <option *ngFor="let registro of dataCliente" [value]="registro.nombresCompletos">{{
+              registro.nombresCompletos }}
+            </option>
+          </select>
+        </div>
+        <div class="d-flex align-items-end">
+          <button type="submit" class="btn btn-primary m-2" [disabled]="formulario.invalid  || validarEnviado">
+            <i class="fas fa-save"></i> Guardar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

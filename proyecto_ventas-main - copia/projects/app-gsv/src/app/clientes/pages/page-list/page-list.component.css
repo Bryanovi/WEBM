@@ -1,0 +1,31 @@
+.table-container {
+  width: 80%;
+  margin: 0 auto;
+  max-height: 300px;
+  overflow: auto;
+}
+table {
+  width: 100%;
+}
+
+/* WebKit */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+/* Internet Explorer */
+::-ms-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+
+::-ms-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}

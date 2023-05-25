@@ -1,0 +1,5 @@
+<div>
+  <button *ngFor="let button of keypadButtons" class="btn {{button.color}}" (click)="enviarAccion(button.accion)">
+    <i class="{{button.icon}}"></i>
+  </button>
+</div>

@@ -1,0 +1,19 @@
+<div>
+  <gsv-title></gsv-title>
+  <gsv-search (buscadorEnviado)="buscarData($event)" *ngIf="!formulario">
+  </gsv-search>
+</div>
+
+<gsv-form *ngIf="formulario" (formularioEnviado)="grabarFormulario($event)" (formularioCerrado)="cerrarFormulario()"
+  [data]="fila"></gsv-form>
+<gsv-container>
+  <perfect-scrollbar>
+    <gsv-table [data]=" data" [metaDataColumns]="metaDataColumns" [title]="title" (onClick)="accionEditar($event)"
+      (onClickEliminar)="accionEliminar($event)"></gsv-table>
+  </perfect-scrollbar>
+
+  <gsv-paginator [length]="totalRegistros" (onChangePage)="changePage($event)">
+  </gsv-paginator>
+
+</gsv-container>
+<gsv-keypad-button [keypadButtons]="keypadButtons" (onClick)="enviarAccion($event)">

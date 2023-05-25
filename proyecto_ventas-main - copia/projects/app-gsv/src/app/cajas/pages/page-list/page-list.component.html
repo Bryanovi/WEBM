@@ -1,0 +1,9 @@
+<gsv-title></gsv-title>
+<gsv-container>
+  <perfect-scrollbar>
+    <gsv-sale-table [data]=" data" [metaDataColumns]="metaDataColumns"></gsv-sale-table>
+  </perfect-scrollbar>
+
+  <gsv-paginator [length]=" totalRegistros" (onChangePage)="changePage($event)">
+  </gsv-paginator>
+</gsv-container>

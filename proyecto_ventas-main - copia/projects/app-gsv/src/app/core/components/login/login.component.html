@@ -1,0 +1,29 @@
+<div class="container bg-light rounded-4 p-5">
+  <div class="row d-flex justify-content-center align-items-center border-black">
+    <div class="col-lg-8 border-black ">
+      <img src="../../../../assets/Statistics.svg" alt="">
+    </div>
+    <div class="col-lg-4 border-black">
+      <div class="mb-3">
+        <input type="text" name="email" id="email" placeholder="Email" class="form-control shadow-none rounded-pill"
+          [(ngModel)]="usuario.email">
+      </div>
+
+      <div class="mb-3">
+        <input type="password" name="password" id="" placeholder="Password"
+          class="form-control shadow-none rounded-pill" [(ngModel)]="usuario.password">
+      </div>
+
+      <div class="mb-3">
+      </div>
+
+      <div class="mb-3">
+        <button type="button" class="btn btn-dark shadow-none rounded-pill" (click)="ingresar()">Login</button>
+        <button type="button" class="btn btn-primary shadow-none rounded-pill"
+          (click)="ingresarGoogle()">Google</button>
+
+      </div>
+
+    </div>
+  </div>
+</div>
